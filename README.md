@@ -1,7 +1,7 @@
 # Term Deposit Calculator
 
 ## Requirements
-- Node.js
+- Node.js at least v18.16.0
 
 ## Available Scripts
 
