@@ -46,7 +46,6 @@ export const CalculatorForm = () => {
         interestFrequency,
       });
 
-      console.log(result);
       setResult(result);
     } catch (e) {
       if (e instanceof Error) {
