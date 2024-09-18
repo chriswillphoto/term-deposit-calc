@@ -1,6 +1,7 @@
 # Term Deposit Calculator
 
 ## Requirements
+
 - Node.js at least v18.16.0
 
 ## Available Scripts
@@ -34,3 +35,14 @@ The build is minified and the filenames include the hashes.\
 
 Builds then runs the app in the production mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Build considerations
+
+I built this project using React and Typescript because that is a front end stack I am familiar with. I chose to write this in the front end because in a real world scenario, the term deposit calculator would not require anything proprietary, nor is there a need to persist any data, so would not necessitate network calls to a backend; saving on traffic and compute costs. 
+
+Business logic lives in a services directory, and tests are colocated with the services they test. React components live in a directory called components, and integration tests would be colocated with the components they test. Seperating business logic from the UI components makes the code easier to test and maintain. There was no need for utility functions in this project, but if there were a need for functions that would be used across different services or in different UI components, I would have put them in a utilities directory.
+
+Right now there is only one page, but if the need arose it would be simple enough to add a pages directory, add react router, and add more pages.
+
+I started with tests to cover the calculator service, covering a wide range of scenarios and probable errors. I have not added integration tests for the UI components, but I would do so if this were a real project.
+
