@@ -176,7 +176,7 @@ describe("calculatorService", () => {
           interestFrequency,
         });
 
-      expect(result).toThrowError("Principal must be greater than 0");
+      expect(result).toThrowError("Principal must be a number greater than 0");
     });
 
     it("should throw an error if the pa interest rate is less than 0", () => {
@@ -195,7 +195,7 @@ describe("calculatorService", () => {
         });
 
       expect(result).toThrowError(
-        "Interest rate must be greater than or equal to 0",
+        "Interest rate must be a number greater than or equal to 0"
       );
     });
   });
