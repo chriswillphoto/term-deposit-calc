@@ -1,3 +1,6 @@
+import { InterestPaidIntervals } from "../types/calculator";
+import { calculateTermDeposit } from "./calculatorService";
+
 describe("calculatorService", () => {
   describe("calculateTermDeposit", () => {
     it("should calculate the final balance on a principal that generates interest for a set investment term with a pa interest rate and interest paid in quarterly intervals", () => {
@@ -192,7 +195,7 @@ describe("calculatorService", () => {
         });
 
       expect(result).toThrowError(
-        "Interest rate must be greater than or equal to 0"
+        "Interest rate must be greater than or equal to 0",
       );
     });
   });
